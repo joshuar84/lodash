@@ -1,9 +1,11 @@
 const _ = {
+
     clamp(num, lower, upper) {
         const lowerClampedValue = Math.max(num, lower);
         const clampedValue = Math.min(lowerClampedValue, upper);
         return clampedValue;
     },
+
     inRange(num, start = 0, end) {
         if (end === undefined) {
             end = start;
@@ -27,11 +29,14 @@ const _ = {
         let isInRange = start <= num && num < end;
         return isInRange;
     },
+
     words(string) {
         const arrayOfWords = string.split(" ");
         return arrayOfWords;
     },
+
     pad(string, length) {
+
         const sLength = string.length;
         const difference = length - sLength;
 
@@ -52,10 +57,11 @@ const _ = {
             const endPad = Math.ceil(difference / 2);
             return spacer(strtPad) + string + spacer(endPad);
         };
-        
+
         const padding = difference / 2;
         return spacer(padding) + string + spacer(padding);
     },
+    
 };
 
 // Do not write or modify code below this line.
