@@ -4,6 +4,9 @@ const _ = {
         const clampedValue = Math.min(lowerClampedValue, upper);
         return clampedValue;
     },
+    inRange() {
+
+    },
 };
 
 
