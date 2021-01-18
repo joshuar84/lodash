@@ -61,7 +61,14 @@ const _ = {
         const padding = difference / 2;
         return spacer(padding) + string + spacer(padding);
     },
-    
+
+    has(obj, path) {
+        if (obj[path] === undefined) {
+            return false;
+        } else if (obj[path] !== undefined) {
+            return true;
+        }
+    },
 };
 
 // Do not write or modify code below this line.
