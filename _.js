@@ -115,6 +115,33 @@ const _ = {
         };
         return arrCopy;
     },
+
+    chunk(array, size = 1) {
+        let chunkedArray = [];
+        let i = 0;
+        while (i < array.length) {
+
+            let arr = [];
+            let j = 0;
+
+            while (j < size) {
+                if (array.length === i) {
+                    break;
+                }
+                let elem = array[i];
+                arr.push(elem);
+                j++;
+                if (j !== size) {
+                    i++;
+                };
+            };
+
+            chunkedArray.push(arr);
+            i++;
+            
+        }
+        return chunkedArray;
+    },
 };
 
 // Do not write or modify code below this line.
