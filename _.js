@@ -82,8 +82,11 @@ const _ = {
 
     findKey(obj, keyOrPFunc) {
         if (typeof keyOrPFunc === 'function') {
-            return keyOrPFunc(obj);
-        } else {
+            for (let key in obj) {
+                if (keyOrPFunc(obj[key])) {
+                    return key;
+                };
+            };
             for (let key in obj) {
                 let val = obj[key];
                 if (val === keyOrPFunc) {
