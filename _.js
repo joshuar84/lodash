@@ -69,6 +69,16 @@ const _ = {
             return true;
         }
     },
+
+    invert(obj) {
+        const newObj = {};
+        for (let key in obj) {
+            let newKey = obj[key];
+            let newVal = key;
+            newObj[newKey] = newVal;
+        };
+        return newObj;
+    },
 };
 
 // Do not write or modify code below this line.
