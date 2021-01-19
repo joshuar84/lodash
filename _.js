@@ -91,7 +91,13 @@ const _ = {
         return undefined;
     },
 
-
+    drop(array, n) {
+        if (n === undefined) {
+            n = 1;
+        };
+        const droppedArray = array.slice(n);
+        return droppedArray;
+    }
 };
 
 // Do not write or modify code below this line.
