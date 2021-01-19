@@ -96,6 +96,11 @@ const _ = {
         };
         return undefined;
     },
+
+    drop(array, num = 1) {
+        const dropCount = 0 + num;
+        return array.slice(dropCount);
+    },
 };
 
 // Do not write or modify code below this line.
