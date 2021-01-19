@@ -101,6 +101,20 @@ const _ = {
         const dropCount = 0 + num;
         return array.slice(dropCount);
     },
+
+    dropWhile(array, predicate) {
+        const arrCopy = array.slice();
+        for (let i = 0; i < array.length; i++) {
+            let elem = array[i];
+            let index = i;
+            if (predicate(elem, index, array)) {
+                arrCopy.shift();
+            } else {
+                break;
+            };
+        };
+        return arrCopy;
+    },
 };
 
 // Do not write or modify code below this line.
